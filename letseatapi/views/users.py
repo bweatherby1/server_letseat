@@ -1,7 +1,7 @@
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
-from rest_framework import serializers
+from rest_framework import serializers, status
 from letseatapi.models import User
 
 class UserSerializer(serializers.ModelSerializer):
@@ -23,7 +23,6 @@ class UserViews(ViewSet):
     def create(self, request):
         user = User.objects.create(
             name=request.data["name"],
-            uid=request.data["uid"]
         )
         serializer = UserSerializer(user)
         return Response(serializer.data)
@@ -31,9 +30,10 @@ class UserViews(ViewSet):
     def update(self, request, pk):
         user = User.objects.get(pk=pk)
         user.name = request.data["name"]
-        user.uid = request.data["uid"]
         user.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
 
     def destroy(self, request, pk):
         user = User.objects.get(pk=pk)
         user.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
