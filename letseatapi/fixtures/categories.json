@@ -1,0 +1,72 @@
+[
+  {
+    "model": "letseatapi.category",
+    "pk": 1,
+    "fields": {
+      "label": "Italian"
+    }
+  },
+  {
+    "model": "letseatapi.category",
+    "pk": 2,
+    "fields": {
+      "label": "Mexican"
+    }
+  },
+  {
+    "model": "letseatapi.category",
+    "pk": 3,
+    "fields": {
+      "label": "Chinese"
+    }
+  },
+  {
+    "model": "letseatapi.category",
+    "pk": 4,
+    "fields": {
+      "label": "Japanese"
+    }
+  },
+  {
+    "model": "letseatapi.category",
+    "pk": 5,
+    "fields": {
+      "label": "American"
+    }
+  },
+  {
+    "model": "letseatapi.category",
+    "pk": 6,
+    "fields": {
+      "label": "Indian"
+    }
+  },
+  {
+    "model": "letseatapi.category",
+    "pk": 7,
+    "fields": {
+      "label": "Thai"
+    }
+  },
+  {
+    "model": "letseatapi.category",
+    "pk": 8,
+    "fields": {
+      "label": "Greek"
+    }
+  },
+  {
+    "model": "letseatapi.category",
+    "pk": 9,
+    "fields": {
+      "label": "French"
+    }
+  },
+  {
+    "model": "letseatapi.category",
+    "pk": 10,
+    "fields": {
+      "label": "Mediterranean"
+    }
+  }
+]
