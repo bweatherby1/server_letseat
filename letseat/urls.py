@@ -15,7 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include
+from rest_framework import routers
+from letseatapi.views import register_user, check_user, RestaurantViews, SpinnerViews, CategoryViews, UserViews
+
+router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'restaurants', RestaurantViews, 'restaurant')
+router.register(r'spinners', SpinnerViews, 'spinner')
+router.register(r'categories', CategoryViews, 'category')
+router.register(r'users', UserViews, 'user')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('register', register_user),
+    path('checkuser', check_user),
+    path('', include(router.urls)),
 ]
