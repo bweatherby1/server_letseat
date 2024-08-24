@@ -46,10 +46,13 @@ class RestaurantViews(ViewSet):
         restaurant.city = request.data["city"]
         restaurant.state = request.data["state"]
         restaurant.zip_code = request.data["zip_code"]
-        restaurant.image_url = request.data["image_url"]
-        restaurant.category = request.data["category"]
-        restaurant.user = request.data["user"]
-        restaurant.save
+        category = Category.objects.get(pk=request.data["category"])
+        restaurant.category = category
+        user = User.objects.get(pk=request.data["user"])
+        restaurant.user = user
+        restaurant.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
         
     def destroy(self, request, pk):
         restaurant = Restaurant.objects.get(pk=pk)

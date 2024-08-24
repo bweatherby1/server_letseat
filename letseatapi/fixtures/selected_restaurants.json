@@ -1,0 +1,92 @@
+[
+  {
+    "model": "letseatapi.selectedrestaurant",
+    "pk": 1,
+    "fields": {
+      "restaurant": 1,
+      "spinner": 1,
+      "user": 1
+    }
+  },
+  {
+    "model": "letseatapi.selectedrestaurant",
+    "pk": 2,
+    "fields": {
+      "restaurant": 2,
+      "spinner": 1,
+      "user": 2
+    }
+  },
+  {
+    "model": "letseatapi.selectedrestaurant",
+    "pk": 3,
+    "fields": {
+      "restaurant": 3,
+      "spinner": 2,
+      "user": 3
+    }
+  },
+  {
+    "model": "letseatapi.selectedrestaurant",
+    "pk": 4,
+    "fields": {
+      "restaurant": 4,
+      "spinner": 2,
+      "user": 4
+    }
+  },
+  {
+    "model": "letseatapi.selectedrestaurant",
+    "pk": 5,
+    "fields": {
+      "restaurant": 5,
+      "spinner": 3,
+      "user": 5
+    }
+  },
+  {
+    "model": "letseatapi.selectedrestaurant",
+    "pk": 6,
+    "fields": {
+      "restaurant": 6,
+      "spinner": 3,
+      "user": 6
+    }
+  },
+  {
+    "model": "letseatapi.selectedrestaurant",
+    "pk": 7,
+    "fields": {
+      "restaurant": 7,
+      "spinner": 4,
+      "user": 7
+    }
+  },
+  {
+    "model": "letseatapi.selectedrestaurant",
+    "pk": 8,
+    "fields": {
+      "restaurant": 8,
+      "spinner": 4,
+      "user": 8
+    }
+  },
+  {
+    "model": "letseatapi.selectedrestaurant",
+    "pk": 9,
+    "fields": {
+      "restaurant": 9,
+      "spinner": 5,
+      "user": 9
+    }
+  },
+  {
+    "model": "letseatapi.selectedrestaurant",
+    "pk": 10,
+    "fields": {
+      "restaurant": 10,
+      "spinner": 5,
+      "user": 10
+    }
+  }
+]
