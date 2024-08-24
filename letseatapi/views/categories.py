@@ -30,7 +30,9 @@ class CategoryViews(ViewSet):
     def update(self, request, pk):
         category = Category.objects.get(pk=pk)
         category.name = request.data["name"]
-        category.save
+        category.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
         
     def destroy(self, request, pk):
         category = Category.objects.get(pk=pk)

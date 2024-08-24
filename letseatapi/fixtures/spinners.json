@@ -1,0 +1,82 @@
+[
+  {
+    "model": "letseatapi.spinner",
+    "pk": 1,
+    "fields": {
+      "primary_user": 1,
+      "secondary_user": 2
+    }
+  },
+  {
+    "model": "letseatapi.spinner",
+    "pk": 2,
+    "fields": {
+      "primary_user": 3,
+      "secondary_user": 4
+    }
+  },
+  {
+    "model": "letseatapi.spinner",
+    "pk": 3,
+    "fields": {
+      "primary_user": 5,
+      "secondary_user": 6
+    }
+  },
+  {
+    "model": "letseatapi.spinner",
+    "pk": 4,
+    "fields": {
+      "primary_user": 7,
+      "secondary_user": 8
+    }
+  },
+  {
+    "model": "letseatapi.spinner",
+    "pk": 5,
+    "fields": {
+      "primary_user": 9,
+      "secondary_user": 10
+    }
+  },
+  {
+    "model": "letseatapi.spinner",
+    "pk": 6,
+    "fields": {
+      "primary_user": 2,
+      "secondary_user": 3
+    }
+  },
+  {
+    "model": "letseatapi.spinner",
+    "pk": 7,
+    "fields": {
+      "primary_user": 4,
+      "secondary_user": 5
+    }
+  },
+  {
+    "model": "letseatapi.spinner",
+    "pk": 8,
+    "fields": {
+      "primary_user": 6,
+      "secondary_user": 7
+    }
+  },
+  {
+    "model": "letseatapi.spinner",
+    "pk": 9,
+    "fields": {
+      "primary_user": 8,
+      "secondary_user": 9
+    }
+  },
+  {
+    "model": "letseatapi.spinner",
+    "pk": 10,
+    "fields": {
+      "primary_user": 10,
+      "secondary_user": 1
+    }
+  }
+]
