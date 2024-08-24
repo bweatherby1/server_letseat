@@ -3,7 +3,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from rest_framework import serializers, status
-from letseatapi.models import Restaurant, Category, User
+from letseatapi.models import Restaurant, Category, User, Spinner
 
 
 class RestaurantSerializer(serializers.ModelSerializer):
@@ -84,3 +84,13 @@ class RestaurantViews(ViewSet):
         restaurants = Restaurant.objects.filter(user=request.query_params.get('user'))
         serializer = RestaurantSerializer(restaurants, many=True)
         return Response(serializer.data)
+    
+    @action(methods=['post'], detail=True)
+    def remove_from_spinner(self, request, pk=None):
+        restaurant = Restaurant.objects.get(pk=pk)
+        spinner_id = request.data.get('spinner_id')
+        
+        spinner = Spinner.objects.get(pk=spinner_id)
+        spinner.restaurants.remove(restaurant)
+        
+        return Response({'status': 'Try Again'}, status=status.HTTP_200_OK)
