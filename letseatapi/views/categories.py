@@ -9,7 +9,7 @@ class CategorySerializer(serializers.ModelSerializer):
         model = Category
         fields = ('id', 'name')
 
-class CategoryView(ViewSet):
+class CategoryViews(ViewSet):
     def retrieve(self, request, pk):
         category = Category.objects.get(pk=pk)
         serializer = CategorySerializer(category)

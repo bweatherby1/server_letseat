@@ -3,70 +3,70 @@
     "model": "letseatapi.category",
     "pk": 1,
     "fields": {
-      "label": "Italian"
+      "name": "Italian"
     }
   },
   {
     "model": "letseatapi.category",
     "pk": 2,
     "fields": {
-      "label": "Mexican"
+      "name": "Mexican"
     }
   },
   {
     "model": "letseatapi.category",
     "pk": 3,
     "fields": {
-      "label": "Chinese"
+      "name": "Chinese"
     }
   },
   {
     "model": "letseatapi.category",
     "pk": 4,
     "fields": {
-      "label": "Japanese"
+      "name": "Japanese"
     }
   },
   {
     "model": "letseatapi.category",
     "pk": 5,
     "fields": {
-      "label": "American"
+      "name": "American"
     }
   },
   {
     "model": "letseatapi.category",
     "pk": 6,
     "fields": {
-      "label": "Indian"
+      "name": "Indian"
     }
   },
   {
     "model": "letseatapi.category",
     "pk": 7,
     "fields": {
-      "label": "Thai"
+      "name": "Thai"
     }
   },
   {
     "model": "letseatapi.category",
     "pk": 8,
     "fields": {
-      "label": "Greek"
+      "name": "Greek"
     }
   },
   {
     "model": "letseatapi.category",
     "pk": 9,
     "fields": {
-      "label": "French"
+      "name": "French"
     }
   },
   {
     "model": "letseatapi.category",
     "pk": 10,
     "fields": {
-      "label": "Mediterranean"
+      "name": "Mediterranean"
     }
   }
 ]

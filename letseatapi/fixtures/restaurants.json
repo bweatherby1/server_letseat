@@ -1,0 +1,422 @@
+[
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 1,
+    "fields": {
+      "name": "Bella Napoli Pizzeria",
+      "street_address": "1200 Villa Pl",
+      "city": "Nashville",
+      "state": "TN",
+      "zip_code": "37212",
+      "category": 1,
+      "user": 1,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 2,
+    "fields": {
+      "name": "Mas Tacos Por Favor",
+      "street_address": "732 Mcferrin Ave",
+      "city": "Nashville",
+      "state": "TN",
+      "zip_code": "37206",
+      "category": 2,
+      "user": 2,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 3,
+    "fields": {
+      "name": "Lucky Bamboo China Bistro",
+      "street_address": "5855 Charlotte Pike",
+      "city": "Nashville",
+      "state": "TN",
+      "zip_code": "37209",
+      "category": 3,
+      "user": 3,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 4,
+    "fields": {
+      "name": "Sonobana Japanese Restaurant",
+      "street_address": "5508 Charlotte Pike",
+      "city": "Nashville",
+      "state": "TN",
+      "zip_code": "37209",
+      "category": 4,
+      "user": 4,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 5,
+    "fields": {
+      "name": "Hattie B's Hot Chicken",
+      "street_address": "112 19th Ave S",
+      "city": "Nashville",
+      "state": "TN",
+      "zip_code": "37203",
+      "category": 5,
+      "user": 5,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 6,
+    "fields": {
+      "name": "Chauhan Ale & Masala House",
+      "street_address": "123 12th Ave N",
+      "city": "Nashville",
+      "state": "TN",
+      "zip_code": "37203",
+      "category": 6,
+      "user": 6,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 7,
+    "fields": {
+      "name": "The Smiling Elephant",
+      "street_address": "2213 8th Ave S",
+      "city": "Nashville",
+      "state": "TN",
+      "zip_code": "37204",
+      "category": 7,
+      "user": 7,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 8,
+    "fields": {
+      "name": "Greko Greek Street Food",
+      "street_address": "704 Main St",
+      "city": "Nashville",
+      "state": "TN",
+      "zip_code": "37206",
+      "category": 8,
+      "user": 8,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 9,
+    "fields": {
+      "name": "Once Upon a Time in France",
+      "street_address": "1102 Gallatin Ave",
+      "city": "Nashville",
+      "state": "TN",
+      "zip_code": "37206",
+      "category": 9,
+      "user": 9,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 10,
+    "fields": {
+      "name": "Epice",
+      "street_address": "2902 12th Ave S",
+      "city": "Nashville",
+      "state": "TN",
+      "zip_code": "37204",
+      "category": 10,
+      "user": 10,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 11,
+    "fields": {
+      "name": "Edward's Steakhouse",
+      "street_address": "107 Franklin St",
+      "city": "Clarksville",
+      "state": "TN",
+      "zip_code": "37040",
+      "category": 5,
+      "user": 1,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 12,
+    "fields": {
+      "name": "Tandoor Indian Bistro",
+      "street_address": "2731 Wilma Rudolph Blvd",
+      "city": "Clarksville",
+      "state": "TN",
+      "zip_code": "37040",
+      "category": 6,
+      "user": 2,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 13,
+    "fields": {
+      "name": "Yada Yada Yada Deli",
+      "street_address": "100 Strawberry Alley",
+      "city": "Clarksville",
+      "state": "TN",
+      "zip_code": "37040",
+      "category": 5,
+      "user": 3,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 14,
+    "fields": {
+      "name": "Kohana Japanese Restaurant",
+      "street_address": "120 S Hampton Pl",
+      "city": "Clarksville",
+      "state": "TN",
+      "zip_code": "37040",
+      "category": 4,
+      "user": 4,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 15,
+    "fields": {
+      "name": "Nicoletta's Italian Kitchen",
+      "street_address": "2195 Madison St",
+      "city": "Clarksville",
+      "state": "TN",
+      "zip_code": "37043",
+      "category": 1,
+      "user": 5,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 16,
+    "fields": {
+      "name": "El Toro Mexican Restaurant",
+      "street_address": "1200 Ft Campbell Blvd",
+      "city": "Clarksville",
+      "state": "TN",
+      "zip_code": "37042",
+      "category": 2,
+      "user": 6,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 17,
+    "fields": {
+      "name": "Wok n Roll",
+      "street_address": "1820 Tiny Town Rd",
+      "city": "Clarksville",
+      "state": "TN",
+      "zip_code": "37042",
+      "category": 3,
+      "user": 7,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 18,
+    "fields": {
+      "name": "Silke's Old World Breads",
+      "street_address": "1214 College St",
+      "city": "Clarksville",
+      "state": "TN",
+      "zip_code": "37040",
+      "category": 9,
+      "user": 8,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 19,
+    "fields": {
+      "name": "Gyros & More",
+      "street_address": "2088 Lowes Dr",
+      "city": "Clarksville",
+      "state": "TN",
+      "zip_code": "37040",
+      "category": 8,
+      "user": 9,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 20,
+    "fields": {
+      "name": "Naru Korean BBQ",
+      "street_address": "2431 Ft Campbell Blvd",
+      "city": "Clarksville",
+      "state": "TN",
+      "zip_code": "37042",
+      "category": 7,
+      "user": 10,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 21,
+    "fields": {
+      "name": "Burdett's Tea Shop & Trading Company",
+      "street_address": "618 S Main St",
+      "city": "Springfield",
+      "state": "TN",
+      "zip_code": "37172",
+      "category": 5,
+      "user": 1,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 22,
+    "fields": {
+      "name": "El Molcajete Mexican Restaurant",
+      "street_address": "2936 Tom Austin Hwy",
+      "city": "Springfield",
+      "state": "TN",
+      "zip_code": "37172",
+      "category": 2,
+      "user": 2,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 23,
+    "fields": {
+      "name": "Ping's Lounge",
+      "street_address": "2008 Memorial Blvd",
+      "city": "Springfield",
+      "state": "TN",
+      "zip_code": "37172",
+      "category": 3,
+      "user": 3,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 24,
+    "fields": {
+      "name": "Larry's Restaurant",
+      "street_address": "1138 S Main St",
+      "city": "Springfield",
+      "state": "TN",
+      "zip_code": "37172",
+      "category": 5,
+      "user": 4,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 25,
+    "fields": {
+      "name": "Depot Bar & Grill",
+      "street_address": "1008 S Main St",
+      "city": "Springfield",
+      "state": "TN",
+      "zip_code": "37172",
+      "category": 5,
+      "user": 5,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 26,
+    "fields": {
+      "name": "Pleasant View Pizza",
+      "street_address": "2606 Highway 49 E",
+      "city": "Pleasant View",
+      "state": "TN",
+      "zip_code": "37146",
+      "category": 1,
+      "user": 6,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 27,
+    "fields": {
+      "name": "Sidelines Grill",
+      "street_address": "2475 Highway 49 E",
+      "city": "Pleasant View",
+      "state": "TN",
+      "zip_code": "37146",
+      "category": 5,
+      "user": 7,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 28,
+    "fields": {
+      "name": "Taco Bell",
+      "street_address": "2384 Highway 49 E",
+      "city": "Pleasant View",
+      "state": "TN",
+      "zip_code": "37146",
+      "category": 2,
+      "user": 8,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 29,
+    "fields": {
+      "name": "Subway",
+      "street_address": "2606 Highway 49 E",
+      "city": "Pleasant View",
+      "state": "TN",
+      "zip_code": "37146",
+      "category": 5,
+      "user": 9,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  },
+  {
+    "model": "letseatapi.restaurant",
+    "pk": 30,
+    "fields": {
+      "name": "Tanner's Pizza",
+      "street_address": "6005 Highway 41A",
+      "city": "Pleasant View",
+      "state": "TN",
+      "zip_code": "37146",
+      "category": 1,
+      "user": 10,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Tom%27s_Restaurant%2C_Manhattan.jpg"
+    }
+  }
+]

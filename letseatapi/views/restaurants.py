@@ -9,7 +9,7 @@ from letseatapi.models import Restaurant, Category, User
 class RestaurantSerializer(serializers.ModelSerializer):
     class Meta:
         model = Restaurant
-        fields = ('id', 'name', 'street_address', 'city', 'state', 'zip_code', 'category', 'user')
+        fields = ('id', 'name', 'street_address', 'city', 'state', 'zip_code', 'image_url', 'category', 'user')
         
 class RestaurantViews(ViewSet):
     def retrieve(self, request, pk):
@@ -32,6 +32,7 @@ class RestaurantViews(ViewSet):
             city=request.data["city"],
             state=request.data["state"],
             zip_code=request.data["zip_code"],
+            image_url=request.data["image_url"],
             category=category,
             user=user
         )
@@ -45,6 +46,7 @@ class RestaurantViews(ViewSet):
         restaurant.city = request.data["city"]
         restaurant.state = request.data["state"]
         restaurant.zip_code = request.data["zip_code"]
+        restaurant.image_url = request.data["image_url"]
         restaurant.category = request.data["category"]
         restaurant.user = request.data["user"]
         restaurant.save

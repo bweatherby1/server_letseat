@@ -6,11 +6,6 @@ from letseatapi.models import Spinner, User, Restaurant
 class SpinnerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Spinner
-        fields = ('id', 'name', 'primary_user', 'secondary_user', 'restaurant')
-
-class SpinnerSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Spinner
         fields = ('id', 'primary_user', 'secondary_user', 'restaurant')
 
 class SpinnerViews(ViewSet):
