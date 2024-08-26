@@ -3,7 +3,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from rest_framework import serializers, status
-from letseatapi.models import Restaurant, Category, User
+from letseatapi.models import Restaurant, Category, User, RestaurantSpinner
 
 
 class RestaurantSerializer(serializers.ModelSerializer):
@@ -15,12 +15,12 @@ class RestaurantViews(ViewSet):
     def retrieve(self, request, pk):
         restaurant = Restaurant.objects.get(pk=pk)
         serializer = RestaurantSerializer(restaurant)
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_200_OK)
       
     def list(self, request):
         restaurants = Restaurant.objects.all()
         serializer = RestaurantSerializer(restaurants, many=True)
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_200_OK)
       
     def create(self, request):
       category = Category.objects.get(pk=request.data["category"])
@@ -37,21 +37,22 @@ class RestaurantViews(ViewSet):
             user=user
         )
       serializer = RestaurantSerializer(restaurant)
-      return Response(serializer.data)
+      return Response(serializer.data, status=status.HTTP_201_CREATED)
       
     def update(self, request, pk):
         restaurant = Restaurant.objects.get(pk=pk)
-        restaurant.name = request.data["name"]
-        restaurant.street_address = request.data["street_address"]
-        restaurant.city = request.data["city"]
-        restaurant.state = request.data["state"]
-        restaurant.zip_code = request.data["zip_code"]
-        category = Category.objects.get(pk=request.data["category"])
+        restaurant.name = request.data.get("name", restaurant.name)
+        restaurant.street_address = request.data.get("street_address", restaurant.street_address)
+        restaurant.city = request.data.get("city", restaurant.city)
+        restaurant.state = request.data.get("state", restaurant.state)
+        restaurant.zip_code = request.data.get("zip_code", restaurant.zip_code)
+        category = Category.objects.get(pk=request.data.get("category", restaurant.category.id))
         restaurant.category = category
-        user = User.objects.get(pk=request.data["user"])
+        user = User.objects.get(pk=request.data.get("user", restaurant.user.id))
         restaurant.user = user
         restaurant.save()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
+
 
         
     def destroy(self, request, pk):
@@ -61,11 +62,18 @@ class RestaurantViews(ViewSet):
     
     @action(methods=['post'], detail=True)
     def in_spinner(self, request, pk):
-        restaurant = self.get_object()
+        restaurant = Restaurant.objects.get(pk=pk)
         restaurant.joined = not restaurant.joined
         restaurant.save()
-        return Response({'message': 'Restaurant added to spinner'}, status=status.HTTP_201_CREATED)
-    
+        message = 'Restaurant added to spinner' if restaurant.joined else 'Restaurant removed from spinner'
+        return Response({'message': message}, status=status.HTTP_201_CREATED)
+
+
+
+
+
+
+
     @action(methods=['get'], detail=False)
     def by_category(self, request):
         restaurants = Restaurant.objects.filter(category=request.query_params.get('category'))
