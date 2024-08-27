@@ -1,9 +1,8 @@
-from django.test import TestCase
-from rest_framework.test import APIClient
+from rest_framework.test import APIClient, APITestCase
 from letseatapi.models import User
 from django.contrib.auth.hashers import make_password
 
-class AuthViewsTestCase(TestCase):
+class AuthViewsTest(APITestCase):
     def setUp(self):
         self.client = APIClient()
         self.user = User.objects.create(

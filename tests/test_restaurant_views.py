@@ -1,9 +1,8 @@
-from django.test import TestCase
-from rest_framework.test import APIClient
+from rest_framework.test import APIClient, APITestCase
 from rest_framework import status
 from letseatapi.models import Restaurant, Category, User
 
-class RestaurantIntegrationTests(TestCase):
+class RestaurantViewsTest(APITestCase):
     def setUp(self):
         self.client = APIClient()
         self.user = User.objects.create()
