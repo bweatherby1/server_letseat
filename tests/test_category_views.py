@@ -1,10 +1,10 @@
 from django.test import TestCase
 from django.urls import reverse
 from rest_framework import status
-from rest_framework.test import APIClient
+from rest_framework.test import APIClient, APITestCase
 from letseatapi.models import Category
 
-class CategoryIntegrationTests(TestCase):
+class CategoryViewsTest(APITestCase):
     def setUp(self):
         self.client = APIClient()
         self.category_data = {"name": "Test Category"}
