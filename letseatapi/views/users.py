@@ -7,29 +7,41 @@ from letseatapi.models import User
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'name')
-        
+        fields = ('id', 'name', 'uid')
+        extra_kwargs = {'password': {'write_only': True}}
+
+    def create(self, validated_data):
+        user = User.objects.create(
+            name=validated_data['name'],
+            uid=validated_data['uid']
+        )
+        user.set_password(validated_data['password'])
+        user.save()
+        return user
+
 class UserViews(ViewSet):
     def retrieve(self, request, pk):
         user = User.objects.get(pk=pk)
         serializer = UserSerializer(user)
         return Response(serializer.data)
-      
+     
     def list(self, request):
         users = User.objects.all()
         serializer = UserSerializer(users, many=True)
         return Response(serializer.data)
 
     def create(self, request):
-        user = User.objects.create(
-            name=request.data["name"],
-        )
-        serializer = UserSerializer(user)
-        return Response(serializer.data)
+        serializer = UserSerializer(data=request.data)
+        if serializer.is_valid():
+            user = serializer.save()
+            return Response(UserSerializer(user).data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def update(self, request, pk):
         user = User.objects.get(pk=pk)
         user.name = request.data["name"]
+        if 'password' in request.data:
+            user.set_password(request.data["password"])
         user.save()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 

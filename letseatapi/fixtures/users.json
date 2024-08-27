@@ -1,72 +1,93 @@
 [
-  {
+    {
       "model": "letseatapi.user",
       "pk": 1,
       "fields": {
-          "name": "John Doe"
+        "name": "John Doe",
+        "uid": "user_1",
+        "password": "Pithon789"
       }
-  },
-  {
+    },
+    {
       "model": "letseatapi.user",
       "pk": 2,
       "fields": {
-          "name": "Jane Smith"
+        "name": "Jane Smith",
+        "uid": "user_2",
+        "password": "Pithon789"
       }
-  },
-  {
+    },
+    {
       "model": "letseatapi.user",
       "pk": 3,
       "fields": {
-          "name": "Mike Johnson"
+        "name": "Mike Johnson",
+        "uid": "user_3",
+        "password": "Pithon789"
       }
-  },
-  {
+    },
+    {
       "model": "letseatapi.user",
       "pk": 4,
       "fields": {
-          "name": "Emily Brown"
+        "name": "Emily Brown",
+        "uid": "user_4",
+        "password": "Pithon789"
       }
-  },
-  {
+    },
+    {
       "model": "letseatapi.user",
       "pk": 5,
       "fields": {
-          "name": "David Lee"
+        "name": "David Lee",
+        "uid": "user_5",
+        "password": "Pithon789"
       }
-  },
-  {
+    },
+    {
       "model": "letseatapi.user",
       "pk": 6,
       "fields": {
-          "name": "Sarah Wilson"
+        "name": "Sarah Wilson",
+        "uid": "user_6",
+        "password": "Pithon789"
       }
-  },
-  {
+    },
+    {
       "model": "letseatapi.user",
       "pk": 7,
       "fields": {
-          "name": "Tom Anderson"
+        "name": "Tom Anderson",
+        "uid": "user_7",
+        "password": "Pithon789"
       }
-  },
-  {
+    },
+    {
       "model": "letseatapi.user",
       "pk": 8,
       "fields": {
-          "name": "Lisa Taylor"
+        "name": "Lisa Taylor",
+        "uid": "user_8",
+        "password": "Pithon789"
       }
-  },
-  {
+    },
+    {
       "model": "letseatapi.user",
       "pk": 9,
       "fields": {
-          "name": "Chris Martin"
+        "name": "Chris Martin",
+        "uid": "user_9",
+        "password": "Pithon789"
       }
-  },
-  {
+    },
+    {
       "model": "letseatapi.user",
       "pk": 10,
       "fields": {
-          "name": "Emma White"
+        "name": "Emma White",
+        "uid": "user_10",
+        "password": "Pithon789"
       }
-  }
-]
+    }
+  ]
+  

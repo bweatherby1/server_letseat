@@ -27,7 +27,7 @@ router.register(r'users', UserViews, 'user')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('register', register_user),
-    path('checkuser', check_user),
+    path('register', register_user, name='register_user'),
+    path('checkuser', check_user, name='check_user'),
     path('', include(router.urls)),
 ]
