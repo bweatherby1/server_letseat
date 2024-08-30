@@ -27,6 +27,8 @@ In this application the user will have a username and password to login with, wh
 
 ## Postman Documentation
 
+Full CRUD for Spinners, Users, Categories, and Restaurants.
+
 Categories - [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://god.gw.postman.com/run-collection/29723472-0063ce35-8db4-4c42-a60b-4e911a38baa5?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D29723472-0063ce35-8db4-4c42-a60b-4e911a38baa5%26entityType%3Dcollection%26workspaceId%3D962c356d-e65c-4d78-a0f5-fe0c9d4cecf9)
 
 Restaurants - [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://god.gw.postman.com/run-collection/29723472-1a212c47-fa7d-4f1c-9996-49c9ef6c55b1?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D29723472-1a212c47-fa7d-4f1c-9996-49c9ef6c55b1%26entityType%3Dcollection%26workspaceId%3D962c356d-e65c-4d78-a0f5-fe0c9d4cecf9)
