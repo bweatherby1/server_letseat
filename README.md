@@ -49,6 +49,3 @@ NSS BE Py/Django template
 ## Loom - Postman Documentation
 
 https://www.loom.com/share/49849ad36a314d1394f0e49b4aada101
-
-
-<div style="position: relative; padding-bottom: 177.6315789473684%; height: 0;"><iframe src="https://www.loom.com/embed/49849ad36a314d1394f0e49b4aada101?sid=06128a97-874b-4315-989a-5cd82aa69bed" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
