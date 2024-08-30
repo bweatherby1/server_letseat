@@ -4,6 +4,9 @@ In the application a user can select their own or combine with another users sel
 
 ## ERD
 
+![Let's Eat (2)](https://github.com/user-attachments/assets/52901b36-a751-435a-9a74-ee40788a9867)
+
+
 ## Wireframe
 
 ## Deployed Link
