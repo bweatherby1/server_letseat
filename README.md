@@ -11,7 +11,8 @@ https://dbdiagram.io/d/Lets-Eat-66ba16668b4bb5230ee36c56
 ## Wireframe
 
 https://miro.com/app/board/uXjVKK0JvAU=/
-<img width="1280" alt="image" src="https://github.com/user-attachments/assets/cc51eb7c-0697-4814-837a-4065ef20361d">
+![Screenshot 2024-09-03 174222](https://github.com/user-attachments/assets/d8bfe7e8-e775-46f6-b060-d0408c376bd8)
+
 
 
 
