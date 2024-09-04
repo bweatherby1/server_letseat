@@ -47,7 +47,7 @@ class RestaurantViewsTest(APITestCase):
     def test_update_restaurant(self):
         update_data = {'name': 'Updated Restaurant'}
         response = self.client.put(f'/restaurants/{self.restaurant.id}', update_data)
-        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.restaurant.refresh_from_db()
         self.assertEqual(self.restaurant.name, 'Updated Restaurant')
 

@@ -30,7 +30,7 @@ class CategoryViewsTest(APITestCase):
             reverse('category-detail', args=[self.category.id]),
             {"name": "Updated Category"}
         )
-        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.category.refresh_from_db()
         self.assertEqual(self.category.name, "Updated Category")
 

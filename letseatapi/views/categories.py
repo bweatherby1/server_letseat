@@ -31,7 +31,8 @@ class CategoryViews(ViewSet):
         category = Category.objects.get(pk=pk)
         category.name = request.data["name"]
         category.save()
-        return Response(None, status=status.HTTP_204_NO_CONTENT)
+        serializer = CategorySerializer(category)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
         
     def destroy(self, request, pk):

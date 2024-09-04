@@ -43,7 +43,8 @@ class UserViews(ViewSet):
         if 'password' in request.data:
             user.set_password(request.data["password"])
         user.save()
-        return Response(None, status=status.HTTP_204_NO_CONTENT)
+        serilizer=UserSerializer(user)
+        return Response(serilizer.data, status=status.HTTP_200_OK)
 
     def destroy(self, request, pk):
         user = User.objects.get(pk=pk)

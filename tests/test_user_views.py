@@ -30,7 +30,7 @@ class TestUserViews(TestCase):
         user = User.objects.create(name="Old Name", uid="olduid")
         update_data = {"name": "New Name", "password": "newpass"}
         response = self.client.put(reverse('user-detail', args=[user.id]), data=update_data, content_type='application/json')
-        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
         user.refresh_from_db()
         self.assertEqual(user.name, "New Name")
 
