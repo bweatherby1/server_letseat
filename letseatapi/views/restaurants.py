@@ -51,7 +51,8 @@ class RestaurantViews(ViewSet):
         user = User.objects.get(pk=request.data.get("user", restaurant.user.id))
         restaurant.user = user
         restaurant.save()
-        return Response(None, status=status.HTTP_204_NO_CONTENT)
+        serializer = RestaurantSerializer(restaurant)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
         

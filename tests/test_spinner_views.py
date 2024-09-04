@@ -32,7 +32,7 @@ class SpinnerViewsTest(APITestCase):
     def test_update_spinner(self):
         data = {'primary_user': self.user2.id, 'secondary_user': self.user1.id}
         response = self.client.put(f'/spinners/{self.spinner.id}', data)
-        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_delete_spinner(self):
         response = self.client.delete(f'/spinners/{self.spinner.id}')

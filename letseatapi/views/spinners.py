@@ -35,7 +35,8 @@ class SpinnerViews(ViewSet):
         spinner.primary_user = User.objects.get(pk=request.data["primary_user"])
         spinner.secondary_user = User.objects.get(pk=request.data["secondary_user"])
         spinner.save()
-        return Response(None, status=status.HTTP_204_NO_CONTENT)
+        serializer=SpinnerSerializer(spinner)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
     def destroy(self, request, pk):
         spinner = Spinner.objects.get(pk=pk)
