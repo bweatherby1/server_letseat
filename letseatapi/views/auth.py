@@ -5,9 +5,12 @@ from django.contrib.auth.hashers import check_password
 
 @api_view(['POST'])
 def check_user(request):
-    uid = request.data['uid']
-    user = User.objects.filter(uid=uid).first()
-    if user is not None and check_password(request.data['password'], user.password):
+    username = request.data.get('username')
+    password = request.data.get('password')
+    
+    user = User.objects.filter(name=username).first()
+    
+    if user and check_password(password, user.password):
         data = {
             'id': user.id,
             'uid': user.uid,
@@ -15,8 +18,7 @@ def check_user(request):
         }
         return Response(data)
     else:
-        data = { 'valid': False }
-        return Response(data)
+        return Response({'valid': False}, status=400)
 
 @api_view(['POST'])
 def register_user(request):

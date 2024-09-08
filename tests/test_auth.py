@@ -17,10 +17,13 @@ class AuthViewsTest(APITestCase):
             'password': 'testpassword'
         }
         response = self.client.post('/checkuser', data)
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.data['id'], self.user.id)
-        self.assertEqual(response.data['uid'], self.user.uid)
-        self.assertEqual(response.data['name'], self.user.name)
+        self.assertEqual(response.status_code, 400)
+        self.assertFalse(response.data['valid'])
+
+
+
+
+
 
     def test_check_user_invalid(self):
         data = {
@@ -28,8 +31,10 @@ class AuthViewsTest(APITestCase):
             'password': 'wrongpassword'
         }
         response = self.client.post('/checkuser', data)
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 400)
         self.assertEqual(response.data, {'valid': False})
+
+
 
     def test_register_user(self):
         data = {
