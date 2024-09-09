@@ -7,14 +7,21 @@ from django.contrib.auth.hashers import check_password
 def check_user(request):
     username = request.data.get('username')
     password = request.data.get('password')
-    
-    user = User.objects.filter(name=username).first()
-    
+   
+    user = User.objects.filter(user_name=username).first()
+   
     if user and check_password(password, user.password):
         data = {
             'id': user.id,
             'uid': user.uid,
-            'name': user.name
+            'name': user.name,
+            'user_name': user.user_name,
+            'bio': user.bio,
+            'profile_picture': user.profile_picture,
+            'street_address': user.street_address,
+            'city': user.city,
+            'state': user.state,
+            'zip_code': user.zip_code
         }
         return Response(data)
     else:
@@ -24,7 +31,14 @@ def check_user(request):
 def register_user(request):
     user = User.objects.create(
         name=request.data['name'],
-        uid=request.data['uid']
+        uid=request.data['uid'],
+        user_name=request.data['user_name'],
+        bio=request.data.get('bio', ''),
+        profile_picture=request.data.get('profile_picture', ''),
+        street_address=request.data['street_address'],
+        city=request.data['city'],
+        state=request.data['state'],
+        zip_code=request.data['zip_code']
     )
     user.set_password(request.data['password'])
     user.save()
@@ -32,6 +46,13 @@ def register_user(request):
     data = {
         'id': user.id,
         'uid': user.uid,
-        'name': user.name
+        'name': user.name,
+        'user_name': user.user_name,
+        'bio': user.bio,
+        'profile_picture': user.profile_picture,
+        'street_address': user.street_address,
+        'city': user.city,
+        'state': user.state,
+        'zip_code': user.zip_code
     }
     return Response(data)

@@ -1,93 +1,163 @@
 [
-    {
-      "model": "letseatapi.user",
-      "pk": 1,
-      "fields": {
-        "name": "John Doe",
-        "uid": "user_1",
-        "password": "Pithon789"
-      }
-    },
-    {
-      "model": "letseatapi.user",
-      "pk": 2,
-      "fields": {
-        "name": "Jane Smith",
-        "uid": "user_2",
-        "password": "Pithon789"
-      }
-    },
-    {
-      "model": "letseatapi.user",
-      "pk": 3,
-      "fields": {
-        "name": "Mike Johnson",
-        "uid": "user_3",
-        "password": "Pithon789"
-      }
-    },
-    {
-      "model": "letseatapi.user",
-      "pk": 4,
-      "fields": {
-        "name": "Emily Brown",
-        "uid": "user_4",
-        "password": "Pithon789"
-      }
-    },
-    {
-      "model": "letseatapi.user",
-      "pk": 5,
-      "fields": {
-        "name": "David Lee",
-        "uid": "user_5",
-        "password": "Pithon789"
-      }
-    },
-    {
-      "model": "letseatapi.user",
-      "pk": 6,
-      "fields": {
-        "name": "Sarah Wilson",
-        "uid": "user_6",
-        "password": "Pithon789"
-      }
-    },
-    {
-      "model": "letseatapi.user",
-      "pk": 7,
-      "fields": {
-        "name": "Tom Anderson",
-        "uid": "user_7",
-        "password": "Pithon789"
-      }
-    },
-    {
-      "model": "letseatapi.user",
-      "pk": 8,
-      "fields": {
-        "name": "Lisa Taylor",
-        "uid": "user_8",
-        "password": "Pithon789"
-      }
-    },
-    {
-      "model": "letseatapi.user",
-      "pk": 9,
-      "fields": {
-        "name": "Chris Martin",
-        "uid": "user_9",
-        "password": "Pithon789"
-      }
-    },
-    {
-      "model": "letseatapi.user",
-      "pk": 10,
-      "fields": {
-        "name": "Emma White",
-        "uid": "user_10",
-        "password": "Pithon789"
-      }
+  {
+    "model": "letseatapi.user",
+    "pk": 1,
+    "fields": {
+      "name": "John Doe",
+      "uid": "user_1",
+      "password": "Pithon789",
+      "user_name": "johndoe",
+      "bio": "Food enthusiast and amateur chef",
+      "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg",
+      "street_address": "123 Main St",
+      "city": "New York",
+      "state": "NY",
+      "zip_code": "10001"
     }
-  ]
-  
+  },
+  {
+    "model": "letseatapi.user",
+    "pk": 2,
+    "fields": {
+      "name": "Jane Smith",
+      "uid": "user_2",
+      "password": "Pithon789",
+      "user_name": "janesmith",
+      "bio": "Vegetarian foodie exploring new cuisines",
+      "profile_picture": "https://randomuser.me/api/portraits/women/2.jpg",
+      "street_address": "456 Elm St",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip_code": "90001"
+    }
+  },
+  {
+    "model": "letseatapi.user",
+    "pk": 3,
+    "fields": {
+      "name": "Mike Johnson",
+      "uid": "user_3",
+      "password": "Pithon789",
+      "user_name": "mikejohnson",
+      "bio": "BBQ master and grill enthusiast",
+      "profile_picture": "https://randomuser.me/api/portraits/men/3.jpg",
+      "street_address": "789 Oak Ave",
+      "city": "Chicago",
+      "state": "IL",
+      "zip_code": "60601"
+    }
+  },
+  {
+    "model": "letseatapi.user",
+    "pk": 4,
+    "fields": {
+      "name": "Emily Brown",
+      "uid": "user_4",
+      "password": "Pithon789",
+      "user_name": "emilybrown",
+      "bio": "Dessert lover and aspiring pastry chef",
+      "profile_picture": "https://randomuser.me/api/portraits/women/4.jpg",
+      "street_address": "101 Pine Rd",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip_code": "94101"
+    }
+  },
+  {
+    "model": "letseatapi.user",
+    "pk": 5,
+    "fields": {
+      "name": "David Lee",
+      "uid": "user_5",
+      "password": "Pithon789",
+      "user_name": "davidlee",
+      "bio": "Sushi aficionado and sake enthusiast",
+      "profile_picture": "https://randomuser.me/api/portraits/men/5.jpg",
+      "street_address": "202 Cedar Ln",
+      "city": "Seattle",
+      "state": "WA",
+      "zip_code": "98101"
+    }
+  },
+  {
+    "model": "letseatapi.user",
+    "pk": 6,
+    "fields": {
+      "name": "Sarah Wilson",
+      "uid": "user_6",
+      "password": "Pithon789",
+      "user_name": "sarahwilson",
+      "bio": "Vegan cook exploring plant-based recipes",
+      "profile_picture": "https://randomuser.me/api/portraits/women/6.jpg",
+      "street_address": "303 Maple Dr",
+      "city": "Austin",
+      "state": "TX",
+      "zip_code": "78701"
+    }
+  },
+  {
+    "model": "letseatapi.user",
+    "pk": 7,
+    "fields": {
+      "name": "Tom Anderson",
+      "uid": "user_7",
+      "password": "Pithon789",
+      "user_name": "tomanderson",
+      "bio": "Pizza lover and home brewing enthusiast",
+      "profile_picture": "https://randomuser.me/api/portraits/men/7.jpg",
+      "street_address": "404 Birch Blvd",
+      "city": "Denver",
+      "state": "CO",
+      "zip_code": "80201"
+    }
+  },
+  {
+    "model": "letseatapi.user",
+    "pk": 8,
+    "fields": {
+      "name": "Lisa Taylor",
+      "uid": "user_8",
+      "password": "Pithon789",
+      "user_name": "lisataylor",
+      "bio": "Spicy food lover and hot sauce collector",
+      "profile_picture": "https://randomuser.me/api/portraits/women/8.jpg",
+      "street_address": "505 Walnut Way",
+      "city": "Miami",
+      "state": "FL",
+      "zip_code": "33101"
+    }
+  },
+  {
+    "model": "letseatapi.user",
+    "pk": 9,
+    "fields": {
+      "name": "Chris Martin",
+      "uid": "user_9",
+      "password": "Pithon789",
+      "user_name": "chrismartin",
+      "bio": "Coffee connoisseur and breakfast food fanatic",
+      "profile_picture": "https://randomuser.me/api/portraits/men/9.jpg",
+      "street_address": "606 Spruce St",
+      "city": "Boston",
+      "state": "MA",
+      "zip_code": "02101"
+    }
+  },
+  {
+    "model": "letseatapi.user",
+    "pk": 10,
+    "fields": {
+      "name": "Emma White",
+      "uid": "user_10",
+      "password": "Pithon789",
+      "user_name": "emmawhite",
+      "bio": "Organic food advocate and farmers market regular",
+      "profile_picture": "https://randomuser.me/api/portraits/women/10.jpg",
+      "street_address": "707 Ash Ave",
+      "city": "Portland",
+      "state": "OR",
+      "zip_code": "97201"
+    }
+  }
+]
+ 

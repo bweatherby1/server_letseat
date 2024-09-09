@@ -7,13 +7,20 @@ from letseatapi.models import User
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'name', 'uid', 'password')
+        fields = ('id', 'name', 'uid', 'password', 'user_name', 'bio', 'profile_picture', 'street_address', 'city', 'state', 'zip_code')
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
         user = User.objects.create(
             name=validated_data['name'],
-            uid=validated_data['uid']
+            uid=validated_data['uid'],
+            user_name=validated_data['user_name'],
+            bio=validated_data.get('bio', ''),
+            profile_picture=validated_data.get('profile_picture', ''),
+            street_address=validated_data['street_address'],
+            city=validated_data['city'],
+            state=validated_data['state'],
+            zip_code=validated_data['zip_code']
         )
         user.set_password(validated_data['password'])
         user.save()
@@ -40,11 +47,18 @@ class UserViews(ViewSet):
     def update(self, request, pk):
         user = User.objects.get(pk=pk)
         user.name = request.data["name"]
+        user.user_name = request.data["user_name"]
+        user.bio = request.data.get("bio", user.bio)
+        user.profile_picture = request.data.get("profile_picture", user.profile_picture)
+        user.street_address = request.data["street_address"]
+        user.city = request.data["city"]
+        user.state = request.data["state"]
+        user.zip_code = request.data["zip_code"]
         if 'password' in request.data:
             user.set_password(request.data["password"])
         user.save()
-        serilizer=UserSerializer(user)
-        return Response(serilizer.data, status=status.HTTP_200_OK)
+        serializer = UserSerializer(user)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
     def destroy(self, request, pk):
         user = User.objects.get(pk=pk)
