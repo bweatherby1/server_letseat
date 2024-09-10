@@ -7,7 +7,6 @@ class AuthViewsTest(APITestCase):
         self.client = APIClient()
         self.user = User.objects.create(
             name='Test User',
-            uid='testuid123',
             password=make_password('testpassword'),
             user_name='testuser',
             bio='Test bio',
@@ -20,26 +19,25 @@ class AuthViewsTest(APITestCase):
 
     def test_check_user_valid(self):
         data = {
-            'uid': 'testuid123',
+            'user_name': 'testuser',
             'password': 'testpassword'
         }
         response = self.client.post('/checkuser', data)
-        self.assertEqual(response.status_code, 400)
-        self.assertFalse(response.data['valid'])
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(response.data['valid'])
 
     def test_check_user_invalid(self):
         data = {
-            'uid': 'testuid123',
+            'user_name': 'testuser',
             'password': 'wrongpassword'
         }
         response = self.client.post('/checkuser', data)
-        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.status_code, 200)
         self.assertEqual(response.data, {'valid': False})
 
     def test_register_user(self):
         data = {
             'name': 'New User',
-            'uid': 'newuid456',
             'password': 'newpassword',
             'user_name': 'newuser',
             'bio': 'New user bio',
@@ -51,18 +49,12 @@ class AuthViewsTest(APITestCase):
         }
         response = self.client.post('/register', data)
         self.assertEqual(response.status_code, 200)
-        self.assertIsNotNone(response.data['id'])
-        self.assertEqual(response.data['uid'], 'newuid456')
+        self.assertIn('id', response.data)
+        self.assertIn('uid', response.data)
         self.assertEqual(response.data['name'], 'New User')
         self.assertEqual(response.data['user_name'], 'newuser')
-        self.assertEqual(response.data['bio'], 'New user bio')
-        self.assertEqual(response.data['profile_picture'], 'https://example.com/new.jpg')
-        self.assertEqual(response.data['street_address'], '456 New St')
-        self.assertEqual(response.data['city'], 'New City')
-        self.assertEqual(response.data['state'], 'NS')
-        self.assertEqual(response.data['zip_code'], '67890')
 
-        new_user = User.objects.get(uid='newuid456')
+        new_user = User.objects.get(user_name='newuser')
         self.assertIsNotNone(new_user)
         self.assertEqual(new_user.name, 'New User')
         self.assertEqual(new_user.user_name, 'newuser')

@@ -5,10 +5,10 @@ from django.contrib.auth.hashers import check_password
 
 @api_view(['POST'])
 def check_user(request):
-    username = request.data.get('username')
+    user_name = request.data.get('user_name')
     password = request.data.get('password')
    
-    user = User.objects.filter(user_name=username).first()
+    user = User.objects.filter(user_name=user_name).first()
    
     if user and check_password(password, user.password):
         data = {
@@ -21,26 +21,29 @@ def check_user(request):
             'street_address': user.street_address,
             'city': user.city,
             'state': user.state,
-            'zip_code': user.zip_code
+            'zip_code': user.zip_code,
+            'valid': True
         }
         return Response(data)
     else:
-        return Response({'valid': False}, status=400)
+        return Response({'valid': False})
+
+
+
 
 @api_view(['POST'])
 def register_user(request):
     user = User.objects.create(
-        name=request.data['name'],
-        uid=request.data['uid'],
-        user_name=request.data['user_name'],
+        name=request.data.get('name', ''),
+        user_name=request.data.get('user_name', ''),
         bio=request.data.get('bio', ''),
         profile_picture=request.data.get('profile_picture', ''),
-        street_address=request.data['street_address'],
-        city=request.data['city'],
-        state=request.data['state'],
-        zip_code=request.data['zip_code']
+        street_address=request.data.get('street_address', ''),
+        city=request.data.get('city', ''),
+        state=request.data.get('state', ''),
+        zip_code=request.data.get('zip_code', '')
     )
-    user.set_password(request.data['password'])
+    user.set_password(request.data.get('password', ''))
     user.save()
 
     data = {

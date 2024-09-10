@@ -7,8 +7,8 @@ from letseatapi.views.spinners import SpinnerSerializer
 class SpinnerViewsTest(APITestCase):
     def setUp(self):
         self.client = APIClient()
-        self.user1 = User.objects.create(uid='user1')
-        self.user2 = User.objects.create(uid='user2')
+        self.user1 = User.objects.create(uid='user1', user_name='user1')
+        self.user2 = User.objects.create(uid='user2', user_name='user2')
         self.spinner = Spinner.objects.create(primary_user=self.user1, secondary_user=self.user2)
 
 
