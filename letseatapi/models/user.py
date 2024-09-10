@@ -9,7 +9,7 @@ class User(models.Model):
     name = models.CharField(max_length=100)
     uid = models.CharField(max_length=255, default=generate_uid)
     password = models.CharField(max_length=128)
-    user_name = models.CharField(max_length=50, null=True)
+    user_name = models.CharField(max_length=50, unique=True)
     bio = models.TextField(blank=True)
     profile_picture = models.CharField(max_length=255, null=True, blank=True)
     street_address = models.CharField(max_length=255)
