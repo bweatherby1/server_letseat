@@ -7,11 +7,11 @@ def generate_uid():
 
 class User(models.Model):
     name = models.CharField(max_length=100)
-    uid = models.CharField(max_length=255, default=generate_uid)
+    uid = models.CharField(max_length=255, primary_key=True, unique=True, default=generate_uid)
     password = models.CharField(max_length=128)
     user_name = models.CharField(max_length=50, unique=True)
     bio = models.TextField(blank=True)
-    profile_picture = models.CharField(max_length=255, null=True, blank=True)
+    profile_picture = models.CharField(max_length=1000, null=True, blank=True)
     street_address = models.CharField(max_length=255)
     city = models.CharField(max_length=100)
     state = models.CharField(max_length=2)

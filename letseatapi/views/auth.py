@@ -12,7 +12,6 @@ def check_user(request):
    
     if user and check_password(password, user.password):
         data = {
-            'id': user.id,
             'uid': user.uid,
             'name': user.name,
             'user_name': user.user_name,
@@ -27,6 +26,9 @@ def check_user(request):
         return Response(data)
     else:
         return Response({'valid': False})
+
+
+
 
 
 
