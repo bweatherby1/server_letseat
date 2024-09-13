@@ -7,13 +7,12 @@ from letseatapi.models import User
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'name', 'uid', 'password', 'user_name', 'bio', 'profile_picture', 'street_address', 'city', 'state', 'zip_code')
+        fields = ('name', 'uid', 'password', 'user_name', 'bio', 'profile_picture', 'street_address', 'city', 'state', 'zip_code')
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
         user = User.objects.create(
             name=validated_data['name'],
-            uid=validated_data['uid'],
             user_name=validated_data['user_name'],
             bio=validated_data.get('bio', ''),
             profile_picture=validated_data.get('profile_picture', ''),
@@ -27,8 +26,8 @@ class UserSerializer(serializers.ModelSerializer):
         return user
 
 class UserViews(ViewSet):
-    def retrieve(self, request, pk):
-        user = User.objects.get(pk=pk)
+    def retrieve(self, request, pk=None):
+        user = User.objects.get(uid=pk)
         serializer = UserSerializer(user)
         return Response(serializer.data)
      

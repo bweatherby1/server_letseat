@@ -6,11 +6,11 @@ from letseatapi.models import Spinner, User
 class SpinnerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Spinner
-        fields = ('id', 'primary_user', 'secondary_user',)
+        fields = ( 'id', 'uid', 'primary_user', 'secondary_user',)
 
 class SpinnerViews(ViewSet):
-    def retrieve(self, request, pk):
-        spinner = Spinner.objects.get(pk=pk)
+    def retrieve(self, request, uid):
+        spinner = Spinner.objects.get(uid=uid)
         serializer = SpinnerSerializer(spinner)
         return Response(serializer.data)
 
@@ -20,8 +20,8 @@ class SpinnerViews(ViewSet):
         return Response(serializer.data)
 
     def create(self, request):
-        primary_user = User.objects.get(pk=request.data["primary_user"])
-        secondary_user = User.objects.get(pk=request.data["secondary_user"])
+        primary_user = User.objects.get(uid=request.data["primary_user"])
+        secondary_user = User.objects.get(uid=request.data["secondary_user"])
 
         spinner = Spinner.objects.create(
             primary_user=primary_user,
@@ -30,15 +30,15 @@ class SpinnerViews(ViewSet):
         serializer = SpinnerSerializer(spinner)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-    def update(self, request, pk):
-        spinner = Spinner.objects.get(pk=pk)
-        spinner.primary_user = User.objects.get(pk=request.data["primary_user"])
-        spinner.secondary_user = User.objects.get(pk=request.data["secondary_user"])
+    def update(self, request, uid):
+        spinner = Spinner.objects.get(uid=uid)
+        spinner.primary_user = User.objects.get(uid=request.data["primary_user"])
+        spinner.secondary_user = User.objects.get(uid=request.data["secondary_user"])
         spinner.save()
-        serializer=SpinnerSerializer(spinner)
+        serializer = SpinnerSerializer(spinner)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
-    def destroy(self, request, pk):
-        spinner = Spinner.objects.get(pk=pk)
+    def destroy(self, request, uid):
+        spinner = Spinner.objects.get(uid=uid)
         spinner.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
