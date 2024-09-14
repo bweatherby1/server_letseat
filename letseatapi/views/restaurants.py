@@ -48,7 +48,7 @@ class RestaurantViews(ViewSet):
         restaurant.zip_code = request.data.get("zip_code", restaurant.zip_code)
         category = Category.objects.get(pk=request.data.get("category", restaurant.category.id))
         restaurant.category = category
-        user = User.objects.get(pk=request.data.get("user", restaurant.user.id))
+        user = User.objects.get(uid=request.data.get("user", restaurant.user.uid))
         restaurant.user = user
         restaurant.save()
         serializer = RestaurantSerializer(restaurant)
