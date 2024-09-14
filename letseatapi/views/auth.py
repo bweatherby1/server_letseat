@@ -49,7 +49,7 @@ def register_user(request):
     user.save()
 
     data = {
-        'id': user.id,
+        'pk': user.pk,
         'uid': user.uid,
         'name': user.name,
         'user_name': user.user_name,
