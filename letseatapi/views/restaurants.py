@@ -1,9 +1,12 @@
-from django.http import HttpResponseServerError
+from django.http import HttpResponseServerError, JsonResponse
+from json import loads
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework.decorators import action
+from django.views.decorators.http import require_POST
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework import serializers, status
-from letseatapi.models import Restaurant, Category, User, RestaurantSpinner
+from letseatapi.models import Restaurant, Category, User, SelectedRestaurant, Spinner
 
 
 class RestaurantSerializer(serializers.ModelSerializer):
@@ -70,11 +73,6 @@ class RestaurantViews(ViewSet):
         return Response({'message': message}, status=status.HTTP_201_CREATED)
 
 
-
-
-
-
-
     @action(methods=['get'], detail=False)
     def by_category(self, request):
         restaurants = Restaurant.objects.filter(category=request.query_params.get('category'))
@@ -98,3 +96,4 @@ class RestaurantViews(ViewSet):
         restaurants = Restaurant.objects.filter(user=request.query_params.get('user'))
         serializer = RestaurantSerializer(restaurants, many=True)
         return Response(serializer.data)
+    
