@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-0)v0b#abx1ifu!lyy3r8neq_)en0^x*xfnbfkew_u)2m6g*%_o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['server-letseat-production.up.railway.app', 'localhost', '127.0.0.1']
+
 
 
 # Application definition
@@ -45,11 +46,35 @@ INSTALLED_APPS = [
 ]
 
 # THIS IS NEW
-CORS_ORIGIN_WHITELIST = (
+CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://127.0.0.1:3000',
-    'http://clientletseat-production.up.railway.app'
-)
+    'https://client-letseat-production.up.railway.app'
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
+
 
 # UPDATE THIS
 MIDDLEWARE = [
