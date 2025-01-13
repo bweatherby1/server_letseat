@@ -74,6 +74,11 @@ CORS_ALLOW_HEADERS = [
     'x-requested-with',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://clientletseat-production.up.railway.app',
+    'https://serverletseat-production.up.railway.app'
+]
+
 
 # UPDATE THIS
 MIDDLEWARE = [
